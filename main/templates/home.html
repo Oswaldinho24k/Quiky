@@ -1,25 +1,10 @@
 {%extends 'base.html'%}
+{%block head%}
+{%endblock head%}
+
 
 {%block content%}
-<style>
-body, html {
-    height: 100%;
-}
 
-.parallax {
-    /* The image used */
-    background-image: url('/static/images/moto.jpeg');
-
-    /* Full height */
-    height: 100%; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-</style>
 
 <div class="image is-2by1">
 	<img src="/static/images/hamb.jpeg">
@@ -96,7 +81,44 @@ body, html {
 <div class="parallax"></div>
 
 <div class="siguiente">
-	Descarga la app
+	
+	<section class="hero is-white">
+	  <div class="hero-body">
+	    <div class="container">
+	      
+	      	
+	      	<div class="columns is-desktop">
+	      		<div class="column">
+	      			<div class="content is-large">
+	      				<br><br>
+	      				<h1>Pide y Disfruta</h1>
+	      				<h3>Con Quiky ahorrarás tiempo y podrás tener lo que desees hasta tu casa</h3>
+	      				<h5 align="center">Descarga la app</h5>
+	      			</div>
+
+	      			<div class="columns">
+			      		<div class="column">
+			      			<figure class="image">
+			      				<img src="static/images/google.png">
+			      			</figure>
+			      		</div>
+			      		<div class="column">
+			      			<figure class="image">
+			      				<img src="static/images/ios.png">
+			      			</figure>
+			      		</div>
+			      	</div>
+	      		</div>
+	      		<div class="column">
+	      			<figure class="image">
+			      		<img src="static/images/cel.png">
+			      	</figure>
+	      		</div>
+	      	</div>
+
+	    </div>
+	  </div>
+	</section>
 </div>
 
 <!--<div class="parallax"></div>-->

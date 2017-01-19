@@ -1,6 +1,25 @@
 .siguiente{
-	min-height: 300px;
+	min-height: 100px;
 }
 .columns{
 	margin:1px;
 }
+
+body, html {
+    height: 100%;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url('/static/images/moto.jpeg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+ 
