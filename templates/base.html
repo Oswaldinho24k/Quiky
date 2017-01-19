@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+	<title>Quiky</title>
+	<link rel="stylesheet" type="text/css" href="/static/bulma-0.3.1/css/bulma.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+
+
+{%block head%}
+{%endblock head%}
+</head>
+<body>
+<!--left-->
+	<nav class="nav">
+	  <div class="nav-left">
+	    <a class="nav-item is-active">
+	      <h1>QUIKY</h1>
+	    </a>
+	  </div>
+<!--center-->
+	  <div class="nav-center">
+	    <a class="nav-item">
+	      <span>center</span>
+	    </a>
+	  </div>
+
+	  <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+	  <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+	  <span class="nav-toggle ">
+	    <span>hola</span>
+	    <span>hola</span>
+	    <span>hola</span>
+	  </span>
+
+	  <!-- This "nav-menu" is hidden on mobile -->
+	  <!-- Add the modifier "is-active" to display it on mobile -->
+	  <!--right-->
+	  <div class="nav-right nav-menu is-active is-mobile">
+	    <a class="nav-item is-active">
+	      Home
+	    </a>
+	    <a class="nav-item">
+	      Documentation
+	    </a>
+	    <a class="nav-item">
+	      Blog
+	    </a>
+
+	    
+	  </div>
+	</nav>
+	 
+	{%block content%}
+
+	{%endblock content%}
+
+	<footer>
+		<div class="box">
+			
+		</div>
+	</footer>
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+{%block scripts%}
+{%endblock scripts%}
+
+
+</body>
+</html>
