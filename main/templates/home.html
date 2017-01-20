@@ -5,11 +5,28 @@
 
 {%block content%}
 
+<!--Slider-->
 
-<div class="image is-2by1">
-	<img src="/static/images/hamb.jpeg">
-	
+<div class="slideshow-container">
+	{%for sl in slides%}
+	<div class="mySlides fade">  
+		<div class="image is-2by1">
+			<img src="/media/{{sl.slide}}" style="width:100%">
+		</div>
+<!--<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>-->
+	</div>
+{%endfor%}
+
+
 </div>
+
+
+<!--Slider ends-->
+
 
 	<div class="columns is-desktop">
 	  <div class="column">
@@ -21,7 +38,7 @@
 				    <div class="media-content">
 				      
 				        <p>
-				          <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+				          <strong>Servicio</strong> 
 				          <br>
 				          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
 				        </p>
@@ -42,7 +59,7 @@
 				    <div class="media-content">
 				      
 				        <p>
-				          <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+				          <strong>Servicio</strong> 
 				          <br>
 				          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
 				        </p>
@@ -63,7 +80,7 @@
 				    <div class="media-content">
 				      
 				        <p>
-				          <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+				          <strong>Servicio</strong> 
 				          <br>
 				          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
 				        </p>
@@ -128,5 +145,9 @@
 
 
 
-
 {%endblock content%}
+
+
+{%block scripts%}
+	<script src="/static/js/home.js"></script>
+{%endblock scripts%}
