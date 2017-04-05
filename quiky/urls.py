@@ -18,10 +18,12 @@ from django.contrib import admin
 from main import urls as mainUrls
 from django.conf import settings
 from django.views.static import serve
+from restaurantes import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include(mainUrls, namespace='main')),
+    url(r'^lugares/$', views.ListView.as_view()),
     url(
         regex=r'^media/(?P<path>.*)$',
         view=serve,

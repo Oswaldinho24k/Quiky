@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'geoposition',
+    'restaurantes',
+
 ]
 
 MIDDLEWARE = [
@@ -124,3 +127,5 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
 
 
 MEDIA_URL = '/media/'
+
+GEOPOSITION_GOOGLE_MAPS_API_KEY = 'AIzaSyAvcKdUQr6yPVx_PkG9l7j-ttYVXu2qS6Q'
