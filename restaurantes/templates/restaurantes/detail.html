@@ -1,0 +1,66 @@
+{%extends 'base.html'%}
+
+{%block content%}
+	<div class="content">
+		<section class="banner_uno">
+		<img src="{{restaurante.image.url}}" alt="">
+		
+	</section>
+	<section class="banner_dos">
+		<article class="perfil">
+			<div>
+				<img src="{{restaurante.logo.url}}" alt="">
+			</div>
+			
+		</article>
+		<div class="redes">
+			<h1>{{restaurante.name}}</h1>
+			
+		</div>
+			
+		<article class="info">
+			<h2>Detalles:</h2>
+			
+
+		</article>
+	</section>
+	
+	<div class="columns">
+		<div class="column">
+					
+				<h3>Ubicación de: {{restaurante.location.name}}</h3>
+				<p id="lat" style="display:none">{{restaurante.location.position.latitude}}</p>
+				<p id="long" style="display:none">{{restaurante.location.position.longitude}}</p>
+				<div id="map"></div>
+						    		
+		</div>
+		<div class="column"></div>
+	</div>
+
+	</div>
+        <script>
+
+      function initMap() {
+      	var lat = document.getElementById('lat').innerHTML;
+      	var long = document.getElementById('long').innerHTML;
+      	lat = parseFloat(lat);
+      	long = parseFloat(long);
+        var location = new google.maps.LatLng(lat,long);
+        
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: location
+        });
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map
+        });
+      }
+    </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key={{keymap}}&callback=initMap">
+    </script>	
+{%endblock content%}
+
+   

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'main',
     'geoposition',
     'restaurantes',
+    'taggit',
 
 ]
 

@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+"""
+App's Urls
+"""
 from main import urls as mainUrls
+from restaurantes import urls as restaurantesUrls
 from django.conf import settings
 from django.views.static import serve
 from restaurantes import views
@@ -23,7 +27,8 @@ from restaurantes import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include(mainUrls, namespace='main')),
-    url(r'^lugares/$', views.ListView.as_view()),
+    #url(r'^lugares/$', views.ListView.as_view()),
+    url(r'^restaurantes/', include(restaurantesUrls, namespace="restaurantes")), 
     url(
         regex=r'^media/(?P<path>.*)$',
         view=serve,

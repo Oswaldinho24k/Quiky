@@ -13,29 +13,23 @@
 	<p id="lat">{{place.position.latitude}}</p>
 	<p id="long">{{place.position.longitude}}</p>
 	
-
-
-
+    <div id="map"></div>
 
 	{%empty%}
 	<p>No hay a donde ir</p>
 	{%endfor%}
+	
 </div>
-
-
- 
-    <h3>My Google Maps Demo</h3>
-    <div id="map"></div>
    
-    <script>
+        <script>
 
       function initMap() {
       	var lat = document.getElementById('lat').innerHTML;
       	var long = document.getElementById('long').innerHTML;
       	lat = parseFloat(lat);
       	long = parseFloat(long);
-      	
-        var location = new google.maps.LatLng(lat + "," + long);
+        var location = new google.maps.LatLng(lat,long);
+        
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
           center: location
@@ -46,6 +40,7 @@
         });
       }
     </script>
+
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key={{keymap}}&callback=initMap">
     </script>
